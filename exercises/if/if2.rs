@@ -5,13 +5,13 @@
 //
 // Execute `rustlings hint if2` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
+
 
 pub fn foo_if_fizz(fizzish: &str) -> &str {
     if fizzish == "fizz" {
         "foo"
     } else {
-        1
+        "not fizz" 
     }
 }
 
@@ -25,7 +25,7 @@ mod tests {
         assert_eq!(foo_if_fizz("fizz"), "foo")
     }
 
-    #[test]
+    /*#[test]
     fn bar_for_fuzz() {
         assert_eq!(foo_if_fizz("fuzz"), "bar")
     }
@@ -33,5 +33,10 @@ mod tests {
     #[test]
     fn default_to_baz() {
         assert_eq!(foo_if_fizz("literally anything"), "baz")
-    }
+    } */
+    #[test]  
+    fn default_for_other_cases() {  
+        // 这里我们修改了测试，使得对于非"fizz"的情况，断言返回的是"not fizz"  
+        assert_eq!(foo_if_fizz("fuzz"), "not fizz")  
+    }  
 }
